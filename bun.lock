@@ -1225,6 +1225,20 @@
         "eslint": "catalog:",
       },
     },
+    "packages/premium-cinema": {
+      "name": "premium-cinema",
+      "version": "1.0.0",
+      "dependencies": {
+        "@remotion/cli": "workspace:*",
+        "react": "19.2.3",
+        "react-dom": "19.2.3",
+        "remotion": "workspace:*",
+      },
+      "devDependencies": {
+        "@types/react": "19.2.7",
+        "typescript": "5.9.3",
+      },
+    },
     "packages/promo-pages": {
       "name": "@remotion/promo-pages",
       "version": "4.0.459",
@@ -7023,6 +7037,8 @@
     "potpack": ["potpack@2.1.0", "", {}, "sha512-pcaShQc1Shq0y+E7GqJqvZj8DTthWV1KeHGdi0Z6IAin2Oi3JnLCOfwnCo84qc+HAp52wT9nK9H7FAJp5a44GQ=="],
 
     "prelude-ls": ["prelude-ls@1.2.1", "", {}, "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="],
+
+    "premium-cinema": ["premium-cinema@workspace:packages/premium-cinema"],
 
     "prettier": ["prettier@3.8.1", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg=="],
 
