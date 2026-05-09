@@ -4,7 +4,8 @@
 		"lib": ["dom", "dom.iterable"],
 		"rootDir": "src",
 		"outDir": "dist",
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"typeRoots": ["../../node_modules/.bun/node_modules/@types", "node_modules/@types"]
 	},
 	"include": ["src"],
 	"references": []
