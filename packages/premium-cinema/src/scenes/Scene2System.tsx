@@ -133,7 +133,7 @@ export const Scene2System: React.FC = () => {
   const fragmentSpring = spring({
     frame: frame - 72,
     fps,
-    config: { damping: 22, stiffness: 300, mass: 0.6 },
+    config: { damping: 62, stiffness: 200, mass: 0.7 },
   });
   const fragmentProgress = interpolate(fragmentSpring, [0, 1], [0, 1], {
     extrapolateLeft: "clamp",

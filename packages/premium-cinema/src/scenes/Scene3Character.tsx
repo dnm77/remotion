@@ -106,16 +106,16 @@ const FaceWireframe: React.FC<{ drawProgress: number; dotsOpacity: number }> = (
       {EDGES.map(([ai, bi], edgeIdx) => {
         const a = toSVG(pts[ai]);
         const b = toSVG(pts[bi]);
-        // stagger each edge: edge i fully drawn when drawProgress > i/totalEdges
+        // stagger: edge i draws from drawProgress=i/N to (i+1)/N
+        // so the last edge always completes exactly when drawProgress hits 1.0
         const edgeStart = edgeIdx / totalEdges;
-        const edgeEnd = edgeStart + 1.5 / totalEdges;
+        const edgeEnd = (edgeIdx + 1) / totalEdges;
         const edgeProgress = interpolate(
           drawProgress,
           [edgeStart, edgeEnd],
           [0, 1],
           { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
         );
-        const len = Math.hypot(b.x - a.x, b.y - a.y);
         return (
           <line
             key={edgeIdx}
